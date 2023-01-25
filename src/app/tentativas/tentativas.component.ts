@@ -8,8 +8,6 @@ import { Coracao } from '../shared/coracao.model';
 })
 export class TentativasComponent implements OnInit, OnChanges {
 
-
-
   @Input() public tentativas!: number;
 
   public coracoes: Coracao[] = [
@@ -20,7 +18,6 @@ export class TentativasComponent implements OnInit, OnChanges {
 
   constructor() {
     
-    
   }
 
   ngOnChanges() {
@@ -28,13 +25,9 @@ export class TentativasComponent implements OnInit, OnChanges {
       let indice = this.coracoes.length - this.tentativas
       this.coracoes[indice - 1].cheio = false
     }
-    //console.log(this.coracoes[0].cheio)
-    //console.log(`Quantidades de tentativas: ${this.tentativas}`)
-  }
-  
-
-  ngOnInit() {
     
+  }
+  ngOnInit() {
   }
 
 }
